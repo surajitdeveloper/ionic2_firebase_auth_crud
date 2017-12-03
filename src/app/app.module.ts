@@ -4,8 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+import { CrudPage } from "../pages/crud/crud";
+import { LoginPage } from "../pages/login/login";
+import { RegistationPage } from "../pages/registation/registation";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
@@ -15,7 +16,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    CrudPage,
+    LoginPage,
+    RegistationPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    CrudPage,
+    LoginPage,
+    RegistationPage
   ],
   providers: [
     StatusBar,
