@@ -22,8 +22,8 @@ export class LoginPage {
     private formBuilder: FormBuilder) {
 
       this.todo = this.formBuilder.group({
-        title: ['', Validators.required],
-        description: [''],
+        email: ['', Validators.required],
+        password: ['', Validators.required],
       });
   }
 

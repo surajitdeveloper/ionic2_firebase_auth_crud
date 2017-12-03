@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 /**
  * Generated class for the RegistationPage page.
  *
@@ -15,8 +15,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  private todo : FormGroup;
+  
+    constructor(public navCtrl: NavController, 
+      public navParams: NavParams,
+      private formBuilder: FormBuilder) {
+  
+        this.todo = this.formBuilder.group({
+          email: ['', Validators.required],
+          password: ['', Validators.required],
+        });
+    }
+  
+    logForm(){
+      console.log(this.todo.value)
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistationPage');

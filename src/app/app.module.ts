@@ -12,6 +12,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+export const firebaseConfig = {
+  apiKey: "AIzaSyBHOmWqfKAvzGM4a5kfV2fhaRXh3Zl5sCw",
+  authDomain: "testsecureproject.firebaseapp.com",
+  databaseURL: "https://testsecureproject.firebaseio.com",
+  projectId: "testsecureproject",
+  storageBucket: "testsecureproject.appspot.com",
+  messagingSenderId: "848981853689"
+};
 @NgModule({
   declarations: [
     MyApp,
