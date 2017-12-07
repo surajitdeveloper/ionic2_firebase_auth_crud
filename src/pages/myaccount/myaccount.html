@@ -5,14 +5,20 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>myaccount</ion-title>
-  </ion-navbar>
-
-</ion-header>
+  
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Myaccount</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
 
 
 <ion-content padding>
+  <div>{{user}}</div>
+
+  <div (click)="logoff()">Logoff</div>
 
 </ion-content>

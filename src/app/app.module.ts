@@ -7,11 +7,13 @@ import { HomePage } from '../pages/home/home';
 import { CrudPage } from "../pages/crud/crud";
 import { LoginPage } from "../pages/login/login";
 import { RegistationPage } from "../pages/registation/registation";
+import { MyaccountPage } from "../pages/myaccount/myaccount";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 export const firebaseConfig = {
   apiKey: "AIzaSyBHOmWqfKAvzGM4a5kfV2fhaRXh3Zl5sCw",
   authDomain: "testsecureproject.firebaseapp.com",
@@ -26,10 +28,14 @@ export const firebaseConfig = {
     HomePage,
     CrudPage,
     LoginPage,
-    RegistationPage
+    RegistationPage,
+    MyaccountPage
   ],
   imports: [
     BrowserModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -38,7 +44,8 @@ export const firebaseConfig = {
     HomePage,
     CrudPage,
     LoginPage,
-    RegistationPage
+    RegistationPage,
+    MyaccountPage
   ],
   providers: [
     StatusBar,
