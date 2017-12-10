@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from "../home/home";
+import { CrudPage } from "../crud/crud";
 
 /**
  * Generated class for the MyaccountPage page.
@@ -23,6 +24,10 @@ export class MyaccountPage {
   logoff()
   {
     this.navCtrl.push(HomePage);
+  }
+  curd()
+  {
+    this.navCtrl.push(CrudPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyaccountPage');

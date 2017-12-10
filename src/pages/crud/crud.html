@@ -17,5 +17,23 @@
 
 
 <ion-content padding>
-
+    
+        <ion-list>
+            <ion-item class='list-group-item' *ngFor="let single_value in receipts">
+                <span ng-click="get_val(single_value.key)"><h6>{{single_value.title}}</h6> {{single_value.description}}</span>
+                <button span ng-click="del_element(single_value.key)" class="pull-right btn btn-xs btn-default btn-danger">Delete</button>
+            </ion-item>
+        </ion-list>
+   
+  <form [formGroup]="todo" (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+  </form>
 </ion-content>
